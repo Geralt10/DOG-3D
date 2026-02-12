@@ -383,6 +383,7 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
         gap: 1rem;
         h1{
           font-size: 1.5rem;
+          font-weight: 400;
           white-space: wrap;
         }
       }
