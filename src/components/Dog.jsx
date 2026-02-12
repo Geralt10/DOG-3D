@@ -158,41 +158,46 @@ const Dog = () => {
   const dogmodel = useRef(model);
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#section-1",
-        endTrigger: "#section-4",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-      },
-    });
 
-    tl.to(dogmodel.current.scene.position, {
-      z: "-=0.75",
-      y: "+=0.1",
-      ease: "none",
-    })
-      .to(dogmodel.current.scene.rotation, {
-        x: `+=${Math.PI / 10}`,
-      })
-      .to(
-        dogmodel.current.scene.rotation,
-        {
-          y: `-=${Math.PI}`,
-        },
-        "third",
-      )
-      .to(
-        dogmodel.current.scene.position,
-        {
-          x: "-=0.5",
-          z: "+=0.6",
-          y: "-=0.05",
-        },
-        "third",
-      );
-  }, []);
+  const isMobile = window.innerWidth <= 768;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#section-1",
+      endTrigger: "#section-4",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+      scroller: isMobile ? undefined : "#smooth-content",
+    },
+  });
+
+  tl.to(dogmodel.current.scene.position, {
+    z: "-=0.75",
+    y: "+=0.1",
+    ease: "none",
+  })
+  .to(dogmodel.current.scene.rotation, {
+    x: `+=${Math.PI / 10}`,
+  })
+  .to(
+    dogmodel.current.scene.rotation,
+    { y: `-=${Math.PI}` },
+    "third"
+  )
+  .to(
+    dogmodel.current.scene.position,
+    {
+      x: "-=0.5",
+      z: "+=0.6",
+      y: "-=0.05",
+    },
+    "third"
+  );
+
+}, []);
+
+
 
   useEffect(() => {
     document

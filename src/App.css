@@ -395,6 +395,7 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
   #section-3{
     padding-top:5rem ;
     padding-inline: 2.5rem;
+    padding-right: 0;
     .top{
       gap: 1rem;
       .right{
@@ -467,4 +468,16 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
     gap: 4px;
   }
  
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  overflow: visible;
 }
