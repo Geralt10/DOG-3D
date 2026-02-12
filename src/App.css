@@ -405,6 +405,7 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
         width: 100%;
         h3{
         font-size: 2.5rem;
+        font-weight: 400;
       }
       }
     }
