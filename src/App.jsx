@@ -20,7 +20,7 @@ const App = () => {
         <Canvas
           id='canvas-elem'
           style={{
-            height: "100vh",
+            height: "100dvh",
             width: "100vw",
             position: "fixed",
             top: "0",
@@ -128,8 +128,9 @@ const App = () => {
             <div className='right'></div>
           </div>
         </section>
-        <section id="section-4">
-           <div className='bottom'>
+
+        <section id='section-4'>
+          <div className='bottom'>
             <div className='left'></div>
             <div className='right'>
               <p>
@@ -147,27 +148,33 @@ const App = () => {
             </div>
           </div>
         </section>
-        <footer className="bottom-footer">
-  <div className="footer-left">
-    <span className="muted">We'd love to hear from you</span>
-    <div className="line"></div>
-    <a href="https://mail.google.com/mail/?view=cm&to=himanshu.dhoundiyal.123@gmail.com&su=Hello&body=Hi Himanshu," target="_blank" className="email">
-      himanshu.dhoundiyal.123@gmail.com
-    </a>
-  </div>
 
-  <div className="footer-right">
-    <span className="newsletter">Subscribe to our newsletter</span>
-    <div className="line"></div>
 
-    <div className="language">
-      <span>Language:</span>
-      <span className="flag">🇺🇸</span>
-      <span className="lang-name">English</span>
-    </div>
-  </div>
-</footer>
+        
+        <footer className='bottom-footer'>
+          <div className='footer-left'>
+            <span className='muted'>We'd love to hear from you</span>
+            <div className='line'></div>
+            <a
+              href='https://mail.google.com/mail/?view=cm&to=himanshu.dhoundiyal.123@gmail.com&su=Hello&body=Hi Himanshu,'
+              target='_blank'
+              className='email'
+            >
+              himanshu.dhoundiyal.123@gmail.com
+            </a>
+          </div>
 
+          <div className='footer-right'>
+            <span className='newsletter'>Subscribe to our newsletter</span>
+            <div className='line'></div>
+
+            <div className='language'>
+              <span>Language:</span>
+              <span className='flag'>🇺🇸</span>
+              <span className='lang-name'>English</span>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );
