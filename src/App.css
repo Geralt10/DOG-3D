@@ -107,11 +107,11 @@ section{
   }
 
   .first-line {
-    width: 35rem;
+    width: 15rem;
     background-color: rgba(255, 0, 0, 0.671);
     height: 1px;
     position: absolute;
-    transform: rotate(45deg) translate(0, -17rem);
+    transform: rotate(45deg) translate(0, -20rem);
   }
   .second-line {
     width: 10rem;
@@ -369,7 +369,12 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera {
         padding-block: 5rem;
       }
     }
-    
+    .first-line{
+      display: none;
+    }
+    .second-line{
+      display: none;
+    }
   }
 
   #section-2{
